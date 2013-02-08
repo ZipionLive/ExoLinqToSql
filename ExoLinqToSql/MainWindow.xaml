@@ -1,0 +1,23 @@
+﻿<Window x:Class="ExoLinqToSql.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized"
+        FontFamily="Ubuntu">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" Name="dgNorthwindEmp" Margin="0,0,0,35">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="ID" Binding="{Binding Path=EmployeeID}" />
+                <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding Path=FullName}" />
+                <DataGridTextColumn Width="*" Header="Date de naissance" Binding="{Binding Path=BirthDate}" />
+                <DataGridTextColumn Width="*" Header="Date d'embauche" Binding="{Binding Path=HireDate}" />
+                <DataGridTextColumn Width="*" Header="Supérieur" Binding="{Binding Path=SupName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Canvas Height="35" Name="cvButtons" VerticalAlignment="Bottom" Background="#C00">
+            <Button Canvas.Left="6" Canvas.Bottom="6" Content="Ajouter" Height="23" Name="btnAdd" Width="75" Click="btnAdd_Click" />
+            <Button Canvas.Left="87" Canvas.Bottom="6" Content="Supprimer" Height="23" Name="btnSuppr" Width="75" />
+            <Button Canvas.Right="87" Canvas.Bottom="6" Content="Sauvegarder" Height="23" Name="btnSave" Width="75" />
+            <Button Canvas.Right="6" Canvas.Bottom="6" Content="Annuler" Height="23" Name="btnCancel" Width="75" />
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="ExoLinqToSql.AddEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ajouter un employé" Height="385" Width="411"
+        FontFamily="Ubuntu">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*" />
+            <ColumnDefinition Width="258*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Prénom :" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lbFirstName" VerticalAlignment="Top" />
+        <Label Content="Nom de famille :" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="lbLastName" VerticalAlignment="Top" />
+        <Label Content="Date de naissance :" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="lbDdn" VerticalAlignment="Top" />
+        <Label Content="Adresse :" Height="28" HorizontalAlignment="Left" Margin="12,99,0,0" Name="lbAdress" VerticalAlignment="Top" />
+        <Label Content="Adresse 2 :" Height="28" HorizontalAlignment="Left" Margin="13,128,0,0" Name="lbAdress2" VerticalAlignment="Top" />
+        <Label Content="Localité :" Height="28" HorizontalAlignment="Left" Margin="13,157,0,0" Name="lbCity" VerticalAlignment="Top" />
+        <Label Content="Code Postal :" Height="28" HorizontalAlignment="Left" Margin="13,186,0,0" Name="lbPostCode" VerticalAlignment="Top" />
+        <Label Content="Pays :" Height="28" HorizontalAlignment="Left" Margin="13,215,0,0" Name="lbCountry" VerticalAlignment="Top" />
+        <Label Content="Région :" Height="28" HorizontalAlignment="Left" Margin="13,244,0,0" Name="lbRegion" VerticalAlignment="Top" />
+        <Label Content="ID du Supérieur :" Height="28" HorizontalAlignment="Left" Margin="13,273,0,0" Name="lbReportsTo" VerticalAlignment="Top" />
+        <TextBox Grid.Column="1" Height="23" Margin="0,10,12,0" Name="tbFirstName" VerticalAlignment="Top" />
+        <TextBox Height="23" Margin="0,39,12,0" Name="tbLastName" VerticalAlignment="Top" Grid.Column="1" />
+        <DatePicker Grid.Column="1" Height="25" Margin="0,67,12,0" Name="dpBirthDate" VerticalAlignment="Top" />
+        <TextBox Height="23" Margin="0,97,12,0" Name="tbAdress" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,126,12,0" Name="tbAdress2" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,155,12,0" Name="tbCity" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,184,12,0" Name="tbPostCode" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,213,12,0" Name="tbCountry" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,242,12,0" Name="tbRegion" VerticalAlignment="Top" Grid.Column="1" />
+        <TextBox Height="23" Margin="0,271,12,0" Name="tbReportsTo" VerticalAlignment="Top" Grid.Column="1" />
+        <Canvas Grid.ColumnSpan="2" Name="cvButtons" Height="38" VerticalAlignment="Bottom" Background="#C00">
+            <Button Canvas.Left="7" Canvas.Top="7" Content="Ajouter" Height="23" Name="btnAddEmp" Width="75" Click="btnAddEmp_Click" />
+            <Button Canvas.Left="88" Canvas.Top="7" Content="Annuler" Name="btnCancel" Height="23" Width="75" Click="btnCancel_Click" />
+            <Button Canvas.Right="7" Canvas.Top="7" Content="Quitter" Height="23" Name="btnQuit" Width="75" Click="btnQuit_Click" />
+        </Canvas>
+    </Grid>
+</Window>
