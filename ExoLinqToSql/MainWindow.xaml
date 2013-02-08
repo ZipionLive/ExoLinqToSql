@@ -15,9 +15,9 @@
         </DataGrid>
         <Canvas Height="35" Name="cvButtons" VerticalAlignment="Bottom" Background="#C00">
             <Button Canvas.Left="6" Canvas.Bottom="6" Content="Ajouter" Height="23" Name="btnAdd" Width="75" Click="btnAdd_Click" />
-            <Button Canvas.Left="87" Canvas.Bottom="6" Content="Supprimer" Height="23" Name="btnSuppr" Width="75" />
-            <Button Canvas.Right="87" Canvas.Bottom="6" Content="Sauvegarder" Height="23" Name="btnSave" Width="75" />
-            <Button Canvas.Right="6" Canvas.Bottom="6" Content="Annuler" Height="23" Name="btnCancel" Width="75" />
+            <Button Canvas.Left="87" Canvas.Bottom="6" Content="Supprimer" Height="23" Name="btnSuppr" Width="75" Click="btnSuppr_Click" />
+            <Button Canvas.Right="87" Canvas.Bottom="6" Content="Sauvegarder" Height="23" Name="btnSave" Width="75" Click="btnSave_Click" />
+            <Button Canvas.Right="6" Canvas.Bottom="6" Content="Annuler" Height="23" Name="btnCancel" Width="75" Click="btnCancel_Click" />
         </Canvas>
     </Grid>
 </Window>

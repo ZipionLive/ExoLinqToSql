@@ -19,10 +19,12 @@ namespace ExoLinqToSql
     public partial class AddEmployeeWindow : Window
     {
         public event EventHandler<AddEmpEventArgs> AddEmployeeEvent;
+        private MainWindow mWindow;
 
         public AddEmployeeWindow(MainWindow mWindow)
         {
-            this.Register(mWindow);
+            this.mWindow = mWindow;
+            this.Register(this.mWindow);
             InitializeComponent();
             this.Show();
         }
@@ -81,19 +83,20 @@ namespace ExoLinqToSql
             dpBirthDate.SelectedDate = DateTime.Now;
         }
 
-        public void Register(MainWindow mWindow)
+        private void Register(MainWindow mWindow)
         {
-            AddEmployeeEvent += new EventHandler<AddEmpEventArgs>(mWindow.HandleAddEmp);
+            AddEmployeeEvent += new EventHandler<AddEmpEventArgs>(this.mWindow.HandleAddEmp);
         }
 
-        public void Unregister(MainWindow mWindow)
+        private void Unregister(MainWindow mWindow)
         {
-            AddEmployeeEvent -= mWindow.HandleAddEmp;
+            AddEmployeeEvent -= this.mWindow.HandleAddEmp;
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Unregister(this.mWindow);
+            this.Close();
         }
     }
 }

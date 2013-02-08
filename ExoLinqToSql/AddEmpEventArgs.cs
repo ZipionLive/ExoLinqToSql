@@ -7,7 +7,7 @@ namespace ExoLinqToSql
 {
     public class AddEmpEventArgs : EventArgs
     {
-        public Employee newEmp { get; set; }
+        public Employee newEmp { get; private set; }
 
         public AddEmpEventArgs(Employee e)
         {
