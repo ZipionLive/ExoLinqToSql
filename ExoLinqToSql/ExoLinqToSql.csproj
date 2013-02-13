@@ -85,8 +85,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ModEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModEmpEventArgs.cs" />
+    <Compile Include="ModEmployeeWindow.xaml.cs">
+      <DependentUpon>ModEmployeeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Northwind.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

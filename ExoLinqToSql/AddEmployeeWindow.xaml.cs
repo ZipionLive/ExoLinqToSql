@@ -54,7 +54,7 @@ namespace ExoLinqToSql
                         if (int.TryParse(tbReportsTo.Text, out rtID))
                             newEmp.ReportsTo = rtID;
                         else
-                            throw new InvalidCastException("Le champ \"Supérieur\" doit contenir un nombre entier");
+                            throw new InvalidCastException("Le champ \"Supérieur\" doit contenir un nombre entier ou être vide");
                     }
 
                     AddEmployeeEvent(this, new AddEmpEventArgs(newEmp));
